@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>signup Page</title>
+    <style>
+        body {
+            background-color: rgb(113, 216, 182);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .login {
+            margin: 0 auto;
+            height: 50%;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            border-radius: 4px;
+            border: 1px solid #fffafa;
+            padding: 11px;
+            margin-bottom: 11px;
+            width: 90%;
+        }
+        button{
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: #e1dfdf;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-top: 11px;
+            
+        }
+        button:hover {
+            background-color:darkblue ;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+        a {
+            color: #008CBA;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #004a6e;
+        }
+        
+        form{
+            background-color:  #92c4df;
+            box-shadow: 30px 30px  30px rgba(13, 9, 9, 0.2);
+            padding: 25px;
+            margin:  auto;
+            width: 40%;
+            border-radius: 4px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <h1>Signup</h1>
+      <form method="get" action="/signupSubmit">
+        <label for="username">username:</label>
+        <input type="text" name="username" id="username"  placeholder="Enter your username" required>
+
+        <label for="email">email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your Email ID" required>
+
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password"  placeholder="Enter your passworrd" required min="8" max="15">
+
+        <center><button id="button" type="submit">Signup</button></center>
+      </form>
+      <p>Already have an account? <a href="login.html">login here</a></p>
+    </div>
+    <script>
+   
+        function validatePassword(password) {
+            var pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+            return pattern.test(password);
+        }
+    
+</script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <style>
+        body {
+            background-color: rgb(113, 216, 182);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        #movieForm{
+            background-color: aquamarine;
+            background-color:  #92c4df;
+            box-shadow: 30px 30px  30px rgba(13, 9, 9, 0.2);
+            padding: 25px;
+            margin:  auto;
+            width: 40%;
+            border-radius: 4px;
+        }
+        input[type="text"] {
+            border-radius: 4px;
+            border: 1px solid #fffafa;
+            padding: 11px;
+            margin-bottom: 11px;
+            width: 90%;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        button{
+            background-color: blue;
+            border: none;
+            border-radius: 4px;
+            color: #e1dfdf;
+            cursor: pointer;
+            padding: 10px 15px;
+            margin-top: 11px;
+            
+        }
+        button:hover {
+            background-color:darkblue ;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Movie Info</h1>
+    <form id="movieForm">
+        <label for="movieName">Enter Movie Name:</label>
+        <input type="text" id="movieName" name="movieName" required>
+        <button type="submit">Get Movie Info</button>
+    </form>
+    <div id="movieInfo"></div>
+    <script src="dash2.js"></script>
+</center>
+</body>
+</html>
